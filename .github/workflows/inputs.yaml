@@ -1,0 +1,25 @@
+name: Input testing
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_enviroment:
+        type: choice
+        description: Enviroment
+        options: 
+        - prod
+        - dev
+        - next
+      deploy_version:
+        description: 'Deploy Version'     
+        required: true
+      tags:
+        description: 'Build Tags'  
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Echo Env
+      run: echo "${{ github.event.inputs.deploy_enviroment }}"
