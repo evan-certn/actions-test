@@ -22,4 +22,4 @@ jobs:
 
     steps:
     - name: Echo Env
-      run: echo "${{ github.event.inputs.deploy_enviroment }}"
+      run: echo "${{ github.event.inputs.deploy_enviroment }} ${{ github.event.inputs.tags }} ${{ github.event.inputs.deploy_version }}"
