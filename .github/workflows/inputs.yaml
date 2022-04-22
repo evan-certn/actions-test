@@ -17,8 +17,8 @@ on:
         description: 'Build Tags'  
 
 jobs:
-  greet:
-    runs-on: ubuntu-latest
+  echo_input:
+    runs-on: ubuntu-20.04
 
     steps:
     - name: Echo Env
