@@ -23,3 +23,5 @@ jobs:
     steps:
     - name: Echo Env
       run: echo "${{ github.event.inputs.deploy_enviroment }} ${{ github.event.inputs.tags }} ${{ github.event.inputs.deploy_version }}"
+    - name: Test Colours
+      run: echo -e "${Red}*** ${Green}${{ github.event.inputs.tags }}"
